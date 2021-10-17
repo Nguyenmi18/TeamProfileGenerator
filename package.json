@@ -1,0 +1,29 @@
+{
+  "name": "TeamProfileGenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nguyenmi18/TeamProfileGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nguyenmi18/TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/Nguyenmi18/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
