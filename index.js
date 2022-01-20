@@ -87,17 +87,17 @@ function start() {
         {
           type: "input",
           name: "engineerId",
-          message: "What is the Engineers Name?",
+          message: "What is the Engineers Id?",
         },
         {
           type: "input",
           name: "engineerEmail",
-          message: "What is the Engineers Name?",
+          message: "What is the Engineers Email?",
         },
         {
           type: "input",
           name: "engineerGithub",
-          message: "What is the Engineers Name?",
+          message: "What is the Engineers Githubpage?",
         },
       ])
       .then((answers) => {
@@ -120,22 +120,22 @@ function start() {
         {
           type: "input",
           name: "internName",
-          message: "What is the Engineers Name?",
+          message: "What is the Engineers Intern Name?",
         },
         {
           type: "input",
           name: "internId",
-          message: "What is the Engineers Name?",
+          message: "What is the Engineers Intern Id?",
         },
         {
           type: "input",
           name: "internEmail",
-          message: "What is the Engineers Name?",
+          message: "What is the Engineers Intern Email?",
         },
         {
           type: "input",
           name: "school",
-          message: "What is the Engineers Name?",
+          message: "What is the Intern School?",
         },
       ])
       .then((answers) => {

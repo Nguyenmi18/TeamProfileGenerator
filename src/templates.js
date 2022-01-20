@@ -33,10 +33,11 @@ const createTeam = (team) => {
 		  </ul>
 		</div>
 	  </div>
-	}	`;
-    //create intern function that returns html with template literal and make sure to pass in the data for the intern
-    const createIntern = (intern) => {
-      return `
+		`;
+  };
+  //create intern function that returns html with template literal and make sure to pass in the data for the intern
+  const createIntern = (intern) => {
+    return `
 	<div class="card" style="width: 18rem;">
 		<div class="card-body">
 		  <h5 class="card-title">${intern.getName()}</h5>
@@ -49,21 +50,32 @@ const createTeam = (team) => {
 		</div>
 	  </div>
 		`;
-    };
+  };
 
-    const buildHtml = [];
+  const buildHtml = [];
 
-    buildHtml.push(
-      team
-        .filter((employee) => employee.getRole() === "Manager")
-        .map((manager) => createManager(manager))
-    );
+  buildHtml.push(
+    team
+      .filter((employee) => employee.getRole() === "Manager")
+      .map((manager) => createManager(manager))
+  );
 
-    return buildHtml.join("");
+  buildHtml.push(
+    team
+      .filter((employee) => employee.getRole() === "Engineer")
+      .map((engineer) => createEngineer(engineer))
+  );
+
+  buildHtml.push(
+    team
+      .filter((employee) => employee.getRole() === "Intern")
+      .map((intern) => createIntern(intern))
+  );
+  return buildHtml.join("");
 };
 
-  module.exports = (data) => {
-    return `
+module.exports = (data) => {
+  return `
 	<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,5 +91,4 @@ const createTeam = (team) => {
 </html>
 
 	`;
-  };
 };
